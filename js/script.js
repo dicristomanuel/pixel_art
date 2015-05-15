@@ -23,7 +23,7 @@
 					 "tomato", "coral", "lightsalmon", "orange",
 					 "gold", "yellow", "greenyellow", "lime", "palegreen",  
 					 "aquamarine", "aqua","darkturquoise", "royalblue", "blue", "indigo",
-					 "darkorchid", "mediumorchid", "violet", "deeppink", "black"];
+					 "darkorchid", "mediumorchid", "violet", "deeppink", "black", "white"];
 
 		colorsArr.forEach(function(color) {
 			var newDiv = document.createElement("DIV");
@@ -42,30 +42,12 @@
 		}) //forEach
 
 
-
-		var resetTile = document.createElement("DIV");
-			body.appendChild(resetTile);
-				resetTile.style.width = "2%";
-				resetTile.style.float = "left";
-				resetTile.style.paddingBottom = "2%";
-				resetTile.style.border = "1px solid grey";
-				resetTile.style.margin = "0.5px";
-				resetTile.style.backgroundColor = 'white';
-
-			resetTile.addEventListener("click", function() {
-				window.location.reload();
-			});
-
-
-
 			var title = document.createElement("IMG");
 			body.appendChild(title);
 				title.style.width = "17%";
 				title.style.float = "right";
 				title.style.paddingRight = '22px';
 				title.style.paddingTop = '3px';
-
-				// title.style.paddingBottom = "2%";
 				title.style.margin = "0.5px";
 				title.setAttribute("src", "pxlogo.jpg")
 
