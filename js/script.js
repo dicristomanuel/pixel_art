@@ -147,9 +147,13 @@
 			divs[i].addEventListener("click", function() {
 			this.style.backgroundColor = color;
 		});	
+
+			divs[i].addEventListener("dragenter", function() {
+			this.style.backgroundColor = color;
+		});
 	} //for loop
 
-
+		
   
 
 
