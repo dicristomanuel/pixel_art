@@ -18,123 +18,60 @@
 
 // **Creates the different tile palette** // 
 
-		var tileRed = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileRed);
-			tileRed.style.width = "2%";
-			tileRed.style.float = "left";
-			tileRed.style.paddingBottom = "2%";
-			tileRed.style.border = "1px solid grey";
-			tileRed.style.margin = "0.5px";
-			tileRed.style.backgroundColor = "#f80c12";
 
-		var tileRedLight = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileRedLight);
-			tileRedLight.style.width = "2%";
-			tileRedLight.style.float = "left";
-			tileRedLight.style.paddingBottom = "2%";
-			tileRedLight.style.border = "1px solid grey";
-			tileRedLight.style.margin = "0.5px";
-			tileRedLight.style.backgroundColor = "#ff6644";
+	var colorsArr = ["darkred", "firebrick", "red", 
+					 "tomato", "coral", "lightsalmon", "orange",
+					 "gold", "yellow", "greenyellow", "lime", "palegreen",  
+					 "aquamarine", "aqua","darkturquoise", "royalblue", "blue", "indigo",
+					 "darkorchid", "mediumorchid", "violet", "deeppink", "black"];
 
-		var tileOrange = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileOrange);
-			tileOrange.style.width = "2%";
-			tileOrange.style.float = "left";
-			tileOrange.style.paddingBottom = "2%";
-			tileOrange.style.border = "1px solid grey";
-			tileOrange.style.margin = "0.5px";
-			tileOrange.style.backgroundColor = "#feae2d";
+		colorsArr.forEach(function(color) {
+			var newDiv = document.createElement("DIV");
+				body.appendChild(newDiv);
+				newDiv.style.width = "2%";
+				newDiv.style.float = "left";
+				newDiv.style.paddingBottom = "2%";
+				newDiv.style.border = "1px solid grey";
+				newDiv.style.margin = "0.5px";
+				newDiv.style.backgroundColor = color;
 
-		var tileYellow = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileYellow);
-			tileYellow.style.width = "2%";
-			tileYellow.style.float = "left";
-			tileYellow.style.paddingBottom = "2%";
-			tileYellow.style.border = "1px solid grey";
-			tileYellow.style.margin = "0.5px";
-			tileYellow.style.backgroundColor = "#d0c310";
-
-		var tileLightGreen = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileLightGreen);
-			tileLightGreen.style.width = "2%";
-			tileLightGreen.style.float = "left";
-			tileLightGreen.style.paddingBottom = "2%";
-			tileLightGreen.style.border = "1px solid grey";
-			tileLightGreen.style.margin = "0.5px";
-			tileLightGreen.style.backgroundColor = "#aacc22";
-
-		var tileGreen = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileGreen);
-			tileGreen.style.width = "2%";
-			tileGreen.style.float = "left";
-			tileGreen.style.paddingBottom = "2%";
-			tileGreen.style.border = "1px solid grey";
-			tileGreen.style.margin = "0.5px";
-			tileGreen.style.backgroundColor = "#69d025";
-
-		var tileLightBlue = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileLightBlue);
-			tileLightBlue.style.width = "2%";
-			tileLightBlue.style.float = "left";
-			tileLightBlue.style.paddingBottom = "2%";
-			tileLightBlue.style.border = "1px solid grey";
-			tileLightBlue.style.margin = "0.5px";
-			tileLightBlue.style.backgroundColor = "#12bdb9";
-
-		var tileBlue = document.createElement("div");
-		var body = document.querySelector("body");
-			body.appendChild(tileBlue);
-			tileBlue.style.width = "2%";
-			tileBlue.style.float = "left";
-			tileBlue.style.paddingBottom = "2%";
-			tileBlue.style.border = "1px solid grey";
-			tileBlue.style.margin = "0.5px";
-			tileBlue.style.backgroundColor = "#3311bb";
-
-
-
-// **Assings a color to the variable color** // 
-
-		var color;
-			tileRed.addEventListener("click", function() {
-				color = this.style.backgroundColor;
+			newDiv.addEventListener("click", function() {
+				currentColor = this.style.backgroundColor;
 			});
 
-			tileRedLight.addEventListener("click", function() {
-				color = this.style.backgroundColor;
+		}) //forEach
+
+
+
+		var resetTile = document.createElement("DIV");
+			body.appendChild(resetTile);
+				resetTile.style.width = "2%";
+				resetTile.style.float = "left";
+				resetTile.style.paddingBottom = "2%";
+				resetTile.style.border = "1px solid grey";
+				resetTile.style.margin = "0.5px";
+				resetTile.style.backgroundColor = 'white';
+
+			resetTile.addEventListener("click", function() {
+				window.location.reload();
 			});
 
-			tileOrange.addEventListener("click", function() {
-				color = this.style.backgroundColor;
-			});
 
-			tileYellow.addEventListener("click", function() {
-				color = this.style.backgroundColor;
-			});
 
-			tileLightGreen.addEventListener("click", function() {
-				color = this.style.backgroundColor;
-			});
+			var title = document.createElement("IMG");
+			body.appendChild(title);
+				title.style.width = "17%";
+				title.style.float = "right";
+				title.style.paddingRight = '22px';
+				title.style.paddingTop = '3px';
 
-			tileGreen.addEventListener("click", function() {
-				color = this.style.backgroundColor;
-			});
+				// title.style.paddingBottom = "2%";
+				title.style.margin = "0.5px";
+				title.setAttribute("src", "pxlogo.jpg")
 
-			tileLightBlue.addEventListener("click", function() {
-				color = this.style.backgroundColor;
+			title.addEventListener("click", function() {
+				window.location.reload();
 			});
-
-			tileBlue.addEventListener("click", function() {
-				color = this.style.backgroundColor;
-			});
-
 
 
 // **Change color of the selected tiles** // 
@@ -142,17 +79,18 @@
 	var divs = document.querySelectorAll("div");
 
 
-
 		for(var i=0; i < divs.length; i++) {
 			divs[i].addEventListener("click", function() {
-			this.style.backgroundColor = color;
+			this.style.backgroundColor = currentColor;
 		});	
 
 			divs[i].addEventListener("dragenter", function() {
-			this.style.backgroundColor = color;
+			this.style.backgroundColor = currentColor;
 		});
 	} //for loop
 
+
+// .MD
 		
   
 
