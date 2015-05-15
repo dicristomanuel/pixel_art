@@ -104,35 +104,35 @@
 
 		var color;
 			tileRed.addEventListener("click", function() {
-				color = "#f80c12";
+				color = this.style.backgroundColor;
 			});
 
 			tileRedLight.addEventListener("click", function() {
-				color = "#ff6644";
+				color = this.style.backgroundColor;
 			});
 
 			tileOrange.addEventListener("click", function() {
-				color = "#feae2d";
+				color = this.style.backgroundColor;
 			});
 
 			tileYellow.addEventListener("click", function() {
-				color = "#d0c310";
+				color = this.style.backgroundColor;
 			});
 
 			tileLightGreen.addEventListener("click", function() {
-				color = "#aacc22";
+				color = this.style.backgroundColor;
 			});
 
 			tileGreen.addEventListener("click", function() {
-				color = "#69d025";
+				color = this.style.backgroundColor;
 			});
 
 			tileLightBlue.addEventListener("click", function() {
-				color = "#12bdb9";
+				color = this.style.backgroundColor;
 			});
 
 			tileBlue.addEventListener("click", function() {
-				color = "#3311bb";
+				color = this.style.backgroundColor;
 			});
 
 
